@@ -118,7 +118,8 @@
                 var property = document.getElementById(btn);
                 var style = getComputedStyle(property);
                 console.log(style['background-color']);
-                if (style['background-color'] == "#fc0303") {
+                // alert((style['background-color']));
+                if (style['background-color'] == "rgb(252, 3, 3)") {
                     property.style.backgroundColor = "#007bff";
                     propery.style.borderColor= "#007bff";
                     count = 1; 
