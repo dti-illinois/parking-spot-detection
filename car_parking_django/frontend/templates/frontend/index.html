@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>UIUC Parking Bot</title>
+        <meta name="description" content="UIUC Parking Bot">
+        <meta name="author" content="SitePoint">
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div class="app">
+            <h1 style="padding-top: 15%; text-align: center;color:#47b3ff">UIUC Parking Bot</h1>
+            <div>
+                <p style="text-align: center;">Welcome to the UIUC Parking Bot application!</p>
+            </div>
+        </div>
+
+
+        <img src="img/logo_placeholder.png">
+
+        <div class="spinner-border text-primary" role="status" style="display:block;padding:20px; margin-left: auto;
+        margin-right: auto;">
+            <span class="sr-only">Loading...</span>
+        </div>
+
+        <script>
+        
+            window.onload = function() {
+                wait();
+            };
+            
+            function wait() {
+            setTimeout(function(){ location.href='home'; }, 2500);
+        };
+            
+        </script>
+    </body>
+</html>
