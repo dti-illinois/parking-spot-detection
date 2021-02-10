@@ -12,7 +12,7 @@ s = socket.socket()
 port = 1233              
   
 # connect to the server on local computer 
-s.connect(('18.191.80.98', port)) 
+s.connect(('3.16.24.149', port)) 
 
 # send data to the server 
 s.sendall(bytes(new_parking_spot, 'utf-8'))

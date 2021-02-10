@@ -31,6 +31,8 @@ print("socket is listening")
 
 data = b''
 
+data_array = []
+
 while True: 
 
     try:
@@ -47,6 +49,7 @@ while True:
             if not data: break
 
             print("Parking spot open at: "+data.decode("utf-8"))
+            data_array.append(data.decode("utf-8"))
 
             # Close the connection with the client 
             c.close() 
@@ -57,8 +60,19 @@ while True:
             # err = e.args[0]
             # if err == errno.EAGAIN or err == errno.EWOULDBLOCK:
 
+            new_parking_spots = ""
+
+            first = True
+            for spot in data_array:
+                if first:
+                    new_parking_spot = spot
+                    first = False
+                else:
+                    new_parking_spot += "&" + spot
+
+
             # Tell client that new parking spot opened up 
-            c.send(data) 
+            c.send(bytes(new_parking_spots, 'utf-8')) 
             
             # Close the connection with the client 
             c.close() 
