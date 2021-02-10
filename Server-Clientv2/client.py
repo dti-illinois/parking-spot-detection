@@ -1,6 +1,7 @@
 import socket
 
 ClientSocket = socket.socket()
+# host = '127.0.0.1'
 host = '18.222.113.143'
 port = 1233
 
