@@ -65,11 +65,10 @@ while True:
             first = True
             for spot in data_array:
                 if first:
-                    new_parking_spot = spot
+                    new_parking_spots = spot
                     first = False
                 else:
-                    new_parking_spot += "&" + spot
-
+                    new_parking_spots += "&" + spot
 
             # Tell client that new parking spot opened up 
             c.send(bytes(new_parking_spots, 'utf-8')) 
