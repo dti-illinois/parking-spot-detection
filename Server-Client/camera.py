@@ -9,10 +9,10 @@ new_parking_spot = input("What parking spot is open: ")
 s = socket.socket()          
   
 # Define the port on which you want to connect 
-port = 1234                
+port = 1233              
   
 # connect to the server on local computer 
-s.connect(('127.0.0.1', port)) 
+s.connect(('18.191.80.98', port)) 
 
 # send data to the server 
 s.sendall(bytes(new_parking_spot, 'utf-8'))
