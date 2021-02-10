@@ -78,6 +78,8 @@ while True:
 
             data = b"No new parking spots are open"
 
+            data_array = []
+
     except socket.error:
         print("Error Occured.")
         break
